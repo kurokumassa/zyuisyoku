@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>授精入力</title>
+    <title>移植入力</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
@@ -11,7 +11,7 @@
 <body>
 
     <form class="w-75 mx-auto">
-        <p class="mt-3">授精日</p>
+        <p class="mt-3">移植日</p>
         <div>
             <input type="date" class="form-control w-100 mt-1" name="day" placeholder="" required>
 
@@ -24,38 +24,12 @@
         <div>
             <input class="form-control w-100 mt-1" name="tane" required>
         </div>
-        <p class="mt-3">採取年月日</p>
-        <div>
-            <input type="date" class="form-control w-100 mt-1" name="saisyu" placeholder=""" >
-        </div>
+
         <p class="mt-3">ラベル番号</p>
         <div>
             <input class="form-control w-100 mt-1" name="raberu" value="-" >
         </div>
-        <p class="mt-3">取り出したボンベ</p>
-        <div>
-            <select class="form-control w-100 mt-1" name="bonbe" value="-">
-                <option value="-">-</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-             
-            </select>
-        <p class="mt-3">取り出したキャニスター</p>
-        <div>
-            <select class="form-control w-100 mt-1" name="kyani" value="-">
-                <option value="-">-</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-             
-            </select>
+
         <p class="mt-3">区分</p>
         <div>
             <select class="form-control w-100 mt-1" name="kubun" >
@@ -81,7 +55,7 @@
     <script>
 
         $(document).ready(function () {
-            const liffId = "**************************************";
+            const liffId = "1656831272-28pWWD74";
             initializeLiff(liffId);
         })
 
@@ -119,7 +93,7 @@
                 const bonbe = $('select[name="bonbe"]').val();
                 const kyani = $('select[name="kyani"]').val();
                 const kubun = $('input[name="kubun"]').val();
-                const msg = `********\n${day}\n${no10}\n${tane}\n${saisyu}\n${raberu}\n${bonbe}\n${kyani}\n${kubun}`;
+                const msg = `移植登録\n${day}\n${no10}\n${raberu}\n${kubun}`;
                 sendText(msg);
                 return false;
             });
